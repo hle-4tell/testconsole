@@ -33,7 +33,8 @@ steps:
     targetType: 'inline'
     script: |      
       dir
-      dir packages
+      dir packages/NUnit.3.12.0
+      dir packages/NUnit.3.12.0/build
 - task: MSBuild@1
   inputs:
     solution: '**/*.csproj'
