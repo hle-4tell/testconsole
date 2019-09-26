@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  name: myAgentPool
+  vmImage: 'win1803'
 
 
 variables:
