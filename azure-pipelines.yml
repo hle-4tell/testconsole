@@ -9,6 +9,13 @@ trigger:
 pool:
   name: myAgentPool
 
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |      
+      git config --global http."https://tfs.com/".sslCAInfo certificate.pem
+
+
 variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
