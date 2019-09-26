@@ -38,3 +38,9 @@ steps:
 - task: MSBuild@1
   inputs:
     solution: '**/*.csproj'
+
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |      
+      ./bin/Debug/4TellPipelineAutomationTestConsoleApp
