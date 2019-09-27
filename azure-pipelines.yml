@@ -35,12 +35,3 @@ steps:
     script: |      
       ./bin/Debug/4TellPipelineAutomationTestConsoleApp
   
-- task: SonarQubePrepare@4
-  inputs:
-    SonarQube: 'SonarQube'
-    scannerMode: 'MSBuild'
-    projectKey: 'Sample-Azure'
-- task: SonarQubeAnalyze@4
-- task: SonarQubePublish@4
-  inputs:
-    pollingTimeoutSec: '300'
