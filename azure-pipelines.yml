@@ -40,8 +40,11 @@ steps:
   inputs:
     solution: '**/*.csproj'
 
-- task: Bash@3
+- task: VSTest@2
   inputs:
-    targetType: 'inline'
-    script: |      
-      ./bin/Debug/4TellPipelineAutomationTestConsoleApp
+    testSelector: 'testAssemblies'
+    testAssemblyVer2: |
+      **\*test*.dll
+      !**\*TestAdapter.dll
+      !**\obj\**
+    searchFolder: '$(System.DefaultWorkingDirectory)'
