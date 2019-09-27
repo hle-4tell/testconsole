@@ -39,8 +39,8 @@ steps:
 - task: MSBuild@1
   inputs:
     solution: '**/*.csproj'
-- task: PublishBuildArtifacts@1
+- task: Bash@3
   inputs:
-    PathtoPublish: '$(Build.Repository.LocalPath)'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
+    targetType: 'inline'
+    script: |      
+      ./bin/Debug/4TellPipelineAutomationTestConsoleApp
