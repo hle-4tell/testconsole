@@ -35,3 +35,4 @@ steps:
     script: |      
       ./bin/Debug/4TellPipelineAutomationTestConsoleApp
   
+- task: SonarQubeAnalyze@4
