@@ -20,10 +20,6 @@ steps:
 
 - task: NuGetCommand@2
   inputs:
-    restoreSolution: '$(solution)'
-
-- task: NuGetCommand@2
-  inputs:
     command: 'restore'
     restoreSolution: '**/packages.config'
     restoreDirectory: './packages'
@@ -37,7 +33,7 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      $Path = $env:TEMP; $Installer = "chrome_installer.exe"; Invoke-WebRequest "http://dl.google.com/chrome/install/375.126/chrome_installer.exe" -OutFile $Path\$Installer; Start-Process -FilePath $Path\$Installer -Args "/silent /install" -Verb RunAs -Wait; Remove-Item $Path\$Installer
+      $Installer = "chrome_installer.exe"; Invoke-WebRequest "http://dl.google.com/chrome/install/375.126/chrome_installer.exe" -OutFile .\$Installer; Start-Process -FilePath .\$Installer -Args "/silent /install" -Verb RunAs -Wait; Remove-Item .\$Installer
 
 - task: Bash@3
   inputs:
