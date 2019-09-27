@@ -18,6 +18,12 @@ variables:
 steps:
 - task: NuGetToolInstaller@1
 
+- task: SonarQubePrepare@4
+  inputs:
+    SonarQube: 'SonarQube'
+    scannerMode: 'MSBuild'
+    projectKey: 'Az'
+
 - task: NuGetCommand@2
   inputs:
     command: 'restore'
