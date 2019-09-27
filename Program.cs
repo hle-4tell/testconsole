@@ -33,7 +33,7 @@ namespace _4TellPipelineAutomationTestConsoleApp
                 driverOptions = argument;
             }
             //driverOptions = "noheadless"; D:\a\1\s
-            string startupPath = "D:\\1\\a\\s\\drivers";
+            string startupPath = "D:\\a\\1\\s\\drivers";
             //Console.WriteLine(startupPath);
             //driver = new ChromeDriver(startupPath);
             ChromeOptions options = new ChromeOptions();
