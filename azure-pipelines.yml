@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'win1803'
+  vmImage: 'vs2017-win2016'
 
 
 variables:
@@ -37,8 +37,8 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      $Path=$env:TEMP'
-      $Installer="chrome_installer.exe";
+      $Path = $env:TEMP';
+      $Installer = "chrome_installer.exe";
       Invoker-WebRequest "http://dl.google.com/chrome/install/375.126/chrome_installer.exe" -OutFile $Path\$Installer;
       Start-Process -FilePath $Path\$Installer -Args "/silent/install" -Verb RunAs -Wait;
       Remove-Item $Path\$Installer
