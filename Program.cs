@@ -32,8 +32,8 @@ namespace _4TellPipelineAutomationTestConsoleApp
                 string argument = args[0].ToString().ToLower();
                 driverOptions = argument;
             }
-            //driverOptions = "noheadless"; D:\_work\1\s
-            string startupPath = "D:\\_work\\1\\s\\drivers";
+            //driverOptions = "noheadless"; D:\a\1\s
+            string startupPath = "D:\\1\\a\\s\\drivers";
             //Console.WriteLine(startupPath);
             //driver = new ChromeDriver(startupPath);
             ChromeOptions options = new ChromeOptions();
